@@ -2,142 +2,86 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>New Luxury Fashion</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- HEADER -->
-  <header>
-    <div class="logo">New Luxury Fashion</div>
-    <nav>
-      <ul>
-        <li><a href="#categories">Categories</a></li>
-        <li><a href="#featured">Featured</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <!-- HERO SLIDER -->
-  <section class="hero">
-    <div class="slider">
-      <div class="slide active" style="background-image:url('https://source.unsplash.com/1600x700/?fashion,luxury')">
-        <div class="hero-overlay"></div>
-        <div class="hero-text">
-          <h1>Elevate Your Style</h1>
-          <p>Exclusive Luxury Fashion Collections</p>
-          <a href="#featured" class="btn">Shop Now</a>
-        </div>
-      </div>
-      <div class="slide" style="background-image:url('https://source.unsplash.com/1600x700/?fashion,runway')">
-        <div class="hero-overlay"></div>
-        <div class="hero-text">
-          <h1>Limited Edition Drops</h1>
-          <p>Discover the latest trends</p>
-          <a href="#featured" class="btn">Explore Collection</a>
-        </div>
-      </div>
+<header class="navbar">
+  <h2 class="logo">New Luxury Fashion</h2>
+  <nav>
+    <a href="#categories">Categories</a>
+    <a href="#products">Featured</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Luxury Redefined</h1>
+    <p>Exclusive fashion for modern elegance</p>
+    <a href="#products" class="btn">Shop Now</a>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section id="categories" class="section">
+  <h2>Shop by Category</h2>
+  <div class="category-grid">
+
+    <div class="category-card">
+      <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80">
+      <h3>Women</h3>
     </div>
-    <div class="slider-controls">
-      <span class="prev">&#10094;</span>
-      <span class="next">&#10095;</span>
+
+    <div class="category-card">
+      <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80">
+      <h3>Men</h3>
     </div>
-  </section>
 
-  <!-- PRODUCT CATEGORIES -->
-  <section id="categories" class="categories">
-    <h2>Shop by Category</h2>
-    <div class="category-grid">
-      <div class="category-card fade-in">
-        <img src="https://source.unsplash.com/400x400/?fashion,men" alt="Men">
-        <h3>Men</h3>
-      </div>
-      <div class="category-card fade-in">
-        <img src="https://source.unsplash.com/400x400/?fashion,women" alt="Women">
-        <h3>Women</h3>
-      </div>
-      <div class="category-card fade-in">
-        <img src="https://source.unsplash.com/400x400/?fashion,accessories" alt="Accessories">
-        <h3>Accessories</h3>
-      </div>
-      <div class="category-card fade-in">
-        <img src="https://source.unsplash.com/400x400/?fashion,limited" alt="Limited Edition">
-        <h3>Limited Edition</h3>
-      </div>
+    <div class="category-card">
+      <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=800&q=80">
+      <h3>Accessories</h3>
     </div>
-  </section>
 
-  <!-- SEARCH & FILTER -->
-  <section class="search-filter fade-in">
-    <input type="text" id="search" placeholder="Search products...">
-    <select id="filter">
-      <option value="all">All Categories</option>
-      <option value="men">Men</option>
-      <option value="women">Women</option>
-      <option value="accessories">Accessories</option>
-      <option value="limited">Limited Edition</option>
-    </select>
-  </section>
+  </div>
+</section>
 
-  <!-- FEATURED PRODUCTS -->
-  <section id="featured" class="featured">
-    <h2>Featured Products</h2>
-    <div class="products-grid">
-      <div class="product-card fade-in" data-category="men" data-name="Luxury Shirt">
-        <img src="https://source.unsplash.com/400x500/?fashion,shirt" alt="Luxury Shirt">
-        <div class="product-overlay"><p>Limited Edition</p></div>
-        <h3>Luxury Shirt</h3>
-        <p>$299</p>
-        <button class="btn quick-view-btn">Quick View</button>
-      </div>
-      <div class="product-card fade-in" data-category="women" data-name="Evening Dress">
-        <img src="https://source.unsplash.com/400x500/?fashion,dress" alt="Evening Dress">
-        <div class="product-overlay"><p>Exclusive Drop</p></div>
-        <h3>Evening Dress</h3>
-        <p>$499</p>
-        <button class="btn quick-view-btn">Quick View</button>
-      </div>
-      <div class="product-card fade-in" data-category="accessories" data-name="Designer Bag">
-        <img src="https://source.unsplash.com/400x500/?fashion,bag" alt="Designer Bag">
-        <div class="product-overlay"><p>Limited Edition</p></div>
-        <h3>Designer Bag</h3>
-        <p>$699</p>
-        <button class="btn quick-view-btn">Quick View</button>
-      </div>
-      <div class="product-card fade-in" data-category="limited" data-name="Luxury Shoes">
-        <img src="https://source.unsplash.com/400x500/?fashion,shoes" alt="Luxury Shoes">
-        <div class="product-overlay"><p>Exclusive Drop</p></div>
-        <h3>Luxury Shoes</h3>
-        <p>$399</p>
-        <button class="btn quick-view-btn">Quick View</button>
-      </div>
+<!-- PRODUCTS -->
+<section id="products" class="section light">
+  <h2>Featured Products</h2>
+
+  <div class="product-grid">
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=800&q=80">
+      <h4>Luxury Jacket</h4>
+      <p>$180</p>
     </div>
-  </section>
 
-  <!-- QUICK VIEW MODAL -->
-  <div id="quick-view-modal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <img id="modal-img" src="" alt="Product">
-      <h3 id="modal-title"></h3>
-      <p id="modal-price"></p>
-      <p>Experience luxury like never before. Limited edition and exclusive designs.</p>
-      <button class="btn">Add to Wishlist</button>
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=800&q=80">
+      <h4>Designer Dress</h4>
+      <p>$220</p>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=800&q=80">
+      <h4>Premium Shoes</h4>
+      <p>$150</p>
     </div>
   </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer id="contact">
-    <p>&copy; 2026 New Luxury Fashion. All rights reserved.</p>
-    <div class="social">
-      <a href="#">Instagram</a>
-      <a href="#">Facebook</a>
-      <a href="#">Pinterest</a>
-    </div>
-  </footer>
+<footer id="contact">
+  <p>© 2026 New Luxury Fashion — Demo Website</p>
+</footer>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
