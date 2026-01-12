@@ -6,7 +6,6 @@
   <title>New Luxury Fashion</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
 </head>
 <body>
   <!-- HEADER -->
@@ -23,14 +22,28 @@
 
   <!-- HERO SLIDER -->
   <section class="hero">
-  <div class="hero-content">
-    <h1>Luxury Redefined</h1>
-    <p>Exclusive fashion for modern elegance</p>
-    <a href="#products" class="btn">Shop Now</a>
-  </div>
-
-  <button class="prev">&#10094;</button>
-  <button class="next">&#10095;</button>
+    <div class="slider">
+      <div class="slide active" style="background-image:url('https://source.unsplash.com/1600x700/?fashion,luxury')">
+        <div class="hero-overlay"></div>
+        <div class="hero-text">
+          <h1>Elevate Your Style</h1>
+          <p>Exclusive Luxury Fashion Collections</p>
+          <a href="#featured" class="btn">Shop Now</a>
+        </div>
+      </div>
+      <div class="slide" style="background-image:url('https://source.unsplash.com/1600x700/?fashion,runway')">
+        <div class="hero-overlay"></div>
+        <div class="hero-text">
+          <h1>Limited Edition Drops</h1>
+          <p>Discover the latest trends</p>
+          <a href="#featured" class="btn">Explore Collection</a>
+        </div>
+      </div>
+    </div>
+    <div class="slider-controls">
+      <span class="prev">&#10094;</span>
+      <span class="next">&#10095;</span>
+    </div>
   </section>
 
   <!-- PRODUCT CATEGORIES -->
@@ -42,7 +55,7 @@
         <h3>Men</h3>
       </div>
       <div class="category-card fade-in">
-        <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=800&q=80">
+        <img src="https://source.unsplash.com/400x400/?fashion,women" alt="Women">
         <h3>Women</h3>
       </div>
       <div class="category-card fade-in">
@@ -127,4 +140,4 @@
 
   <script src="script.js"></script>
 </body>
-  </html>
+</html>
