@@ -1,22 +1,24 @@
 // HERO SLIDER
-let slides = document.querySelectorAll('.slide');
-let currentSlide = 0;
+// HERO SLIDER (LOCAL IMAGES)
+document.addEventListener("DOMContentLoaded", () => {
+  const hero = document.querySelector(".hero");
 
-const nextSlide = () => {
-  slides[currentSlide].classList.remove('active');
-  currentSlide = (currentSlide + 1) % slides.length;
-  slides[currentSlide].classList.add('active');
-}
+  const heroImages = [
+    "images/hero1.jpg",
+    "images/hero2.jpg",
+    "images/hero3.jpg"
+  ];
 
-const prevSlide = () => {
-  slides[currentSlide].classList.remove('active');
-  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-  slides[currentSlide].classList.add('active');
-}
+  let currentIndex = 0;
 
-document.querySelector('.next').addEventListener('click', nextSlide);
-document.querySelector('.prev').addEventListener('click', prevSlide);
-setInterval(nextSlide, 5000);
+  function changeHero() {
+    hero.style.backgroundImage = `url('${heroImages[currentIndex]}')`;
+    currentIndex = (currentIndex + 1) % heroImages.length;
+  }
+
+  changeHero();
+  setInterval(changeHero, 5000);
+});
 
 // HERO TEXT ANIMATION
 const heroText = document.querySelector('.hero-text');
