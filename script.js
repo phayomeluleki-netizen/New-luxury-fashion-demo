@@ -104,7 +104,7 @@ faders.forEach(fader => appearOnScroll.observe(fader));
 // PRODUCT FILTER
 const searchInput = document.getElementById('search');
 const filterSelect = document.getElementById('filter');
-const productCards = document.querySelectorAll('.product-card');
+const getProductCards = () => document.querySelectorAll('.product-card');
 
 const filterProducts = () => {
   const searchValue = searchInput.value.toLowerCase();
