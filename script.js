@@ -127,24 +127,17 @@ searchInput.addEventListener('input', filterProducts);
 filterSelect.addEventListener('change', filterProducts);
 
 // QUICK VIEW MODAL
-const modal = document.getElementById('quick-view-modal');
-const modalImg = document.getElementById('modal-img');
-const modalTitle = document.getElementById('modal-title');
-const modalPrice = document.getElementById('modal-price');
-const closeModal = document.querySelector('.close');
-
-document.querySelectorAll('.quick-view-btn').forEach(btn => {
-  btn.addEventListener('click', (e) => {
-    const card = e.target.closest('.product-card');
-    modal.style.display = 'block';
-    modalImg.src = card.querySelector('img').src;
-    modalTitle.textContent = card.dataset.name;
-    modalPrice.textContent = card.querySelector('p').textContent;
+function attachQuickView() {
+  document.querySelectorAll(".quick-view-btn").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      const card = e.target.closest(".product-card");
+      modal.style.display = "block";
+      modalImg.src = card.querySelector("img").src;
+      modalTitle.textContent = card.dataset.name;
+      modalPrice.textContent = card.querySelector("p").textContent;
+    });
   });
-});
-
-closeModal.onclick = () => modal.style.display = 'none';
-window.onclick = (e) => { if(e.target == modal) modal.style.display = 'none'; }
+}
 
 // MOBILE HAMBURGER
 const hamburger = document.createElement('div');
