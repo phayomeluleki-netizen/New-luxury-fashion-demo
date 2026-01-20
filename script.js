@@ -4,9 +4,9 @@ document.addEventListener("DOMContentLoaded",document.querySelector(".hero-conte
   const hero = document.querySelector(".hero");
 
   const heroImages = [
-    "images/hero1.jpg",
-    "images/hero2.jpg",
-    "images/hero3.jpg"
+    "hero1.jpg",
+    "hero2.jpg",
+    "hero3.jpg"
   ];
 
   let currentIndex = 0;
@@ -29,28 +29,28 @@ const products = [
     price: "$299",
     category: "men",
     tag: "Limited Edition",
-    image: "images/products/luxury-shirt.jpg"
+    image: "luxury-shirt.jpg"
   },
   {
     name: "Evening Dress",
     price: "$499",
     category: "women",
     tag: "Exclusive Drop",
-    image: "images/products/evening-dress.jpg"
+    image: "evening-dress.jpg"
   },
   {
     name: "Designer Bag",
     price: "$699",
     category: "accessories",
     tag: "Limited Edition",
-    image: "images/products/designer-bag.jpg"
+    image: "designer-bag.jpg"
   },
   {
     name: "Luxury Shoes",
     price: "$399",
     category: "limited",
     tag: "Exclusive Drop",
-    image: "images/products/luxury-shoes.jpg"
+    image: "luxury-shoes.jpg"
   }
 ];
 
