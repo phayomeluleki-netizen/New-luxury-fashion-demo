@@ -19,6 +19,68 @@ document.addEventListener("DOMContentLoaded",document.querySelector(".hero-conte
   changeHero();
   setInterval(changeHero, 5000);
 });
+// ================================
+// DYNAMIC PRODUCT LOADING
+// ================================
+
+const products = [
+  {
+    name: "Luxury Shirt",
+    price: "$299",
+    category: "men",
+    tag: "Limited Edition",
+    image: "images/products/luxury-shirt.jpg"
+  },
+  {
+    name: "Evening Dress",
+    price: "$499",
+    category: "women",
+    tag: "Exclusive Drop",
+    image: "images/products/evening-dress.jpg"
+  },
+  {
+    name: "Designer Bag",
+    price: "$699",
+    category: "accessories",
+    tag: "Limited Edition",
+    image: "images/products/designer-bag.jpg"
+  },
+  {
+    name: "Luxury Shoes",
+    price: "$399",
+    category: "limited",
+    tag: "Exclusive Drop",
+    image: "images/products/luxury-shoes.jpg"
+  }
+];
+
+const productsGrid = document.getElementById("products-grid");
+
+function loadProducts() {
+  productsGrid.innerHTML = "";
+
+  products.forEach(product => {
+    const card = document.createElement("div");
+    card.className = "product-card fade-in";
+    card.dataset.category = product.category;
+    card.dataset.name = product.name;
+
+    card.innerHTML = `
+      <img src="${product.image}" alt="${product.name}">
+      <div class="product-overlay"><p>${product.tag}</p></div>
+      <h3>${product.name}</h3>
+      <p>${product.price}</p>
+      <button class="btn quick-view-btn">Quick View</button>
+    `;
+
+    productsGrid.appendChild(card);
+  });
+
+  attachQuickView();
+}
+
+// LOAD PRODUCTS ON PAGE LOAD
+window.addEventListener("DOMContentLoaded", loadProducts);
 
 // HERO TEXT ANIMATION
 const heroText = document.querySelector('.hero-text');
