@@ -102,26 +102,22 @@ const appearOnScroll = new IntersectionObserver((entries, observer)=>{
 faders.forEach(fader => appearOnScroll.observe(fader));
 
 // PRODUCT FILTER
-const searchInput = document.getElementById('search');
-const filterSelect = document.getElementById('filter');
-const getProductCards = () => document.querySelectorAll('.product-card');
-
 const filterProducts = () => {
   const searchValue = searchInput.value.toLowerCase();
   const filterValue = filterSelect.value;
 
-  productCards.forEach(card => {
+  getProductCards().forEach(card => {
     const name = card.dataset.name.toLowerCase();
     const category = card.dataset.category;
 
-    if ((name.includes(searchValue) || searchValue === '') &&
-        (filterValue === 'all' || category === filterValue)) {
-      card.style.display = 'block';
-    } else {
-      card.style.display = 'none';
-    }
+    card.style.display =
+      (name.includes(searchValue) || searchValue === "") &&
+      (filterValue === "all" || category === filterValue)
+        ? "block"
+        : "none";
   });
-}
+};
+
 
 searchInput.addEventListener('input', filterProducts);
 filterSelect.addEventListener('change', filterProducts);
