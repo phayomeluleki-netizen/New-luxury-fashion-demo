@@ -1,6 +1,6 @@
 // HERO SLIDER
 // HERO SLIDER (LOCAL IMAGES)
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded",document.querySelector(".hero-content").classList.add("visible"); () => {
   const hero = document.querySelector(".hero");
 
   const heroImages = [
