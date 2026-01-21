@@ -32,35 +32,36 @@
     </div>
   </section>
 
-  <!-- CATEGORIES -->
-  <section class="categories">
-    <div class="cat-card"><img src="man.jpg"><span>Men</span></div>
-    <div class="cat-card"><img src="women.jpg"><span>Women</span></div>
-    <div class="cat-card"><img src="accessories.jpg"><span>Accessories</span></div>
-    <div class="cat-card"><img src="Accessories1.jpg"><span>Limited</span></div>
-  </section>
+  <!-- CATEGORY FILTER -->
+  <div class="category-filter">
+    <button onclick="loadProducts('all')">All</button>
+    <button onclick="loadProducts('men')">Men</button>
+    <button onclick="loadProducts('women')">Women</button>
+    <button onclick="loadProducts('accessories')">Accessories</button>
+  </div>
 
-  <!-- FILTER -->
-  <section class="filter">
-    <button onclick="filterProducts('all')">All</button>
-    <button onclick="filterProducts('women')">Women</button>
-    <button onclick="filterProducts('accessories')">Accessories</button>
-    <button onclick="filterProducts('limited')">Limited</button>
-  </section>
-<div class="category-filter">
-  <button onclick="loadProducts('all')">All</button>
-  <button onclick="loadProducts('men')">Men</button>
-  <button onclick="loadProducts('women')">Women</button>
-  <button onclick="loadProducts('accessories')">Accessories</button>
-</div>
   <!-- PRODUCTS -->
-  <div class="products-grid" id="products"></div>
+  <section id="products" class="products-grid"></section>
 
+  <!-- QUICK VIEW MODAL -->
+  <div id="quick-view-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="modal-img" src="" alt="Product">
+      <h3 id="modal-title"></h3>
+      <p id="modal-price"></p>
+      <button class="btn">Add to Wishlist</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
   <footer class="footer">
     © 2026 New Luxury Fashion — Designed for Excellence
   </footer>
 
+  <!-- SCRIPTS -->
   <script src="products.js"></script>
-<script src="script.js"></script>
+  <script src="script.js"></script>
+
 </body>
 </html>
