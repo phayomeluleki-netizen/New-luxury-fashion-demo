@@ -121,13 +121,14 @@ body {
 
 .product img {
   width: 100%;
-  height: 380px; /* BIGGER */
+  height: 320px; /* back to original balance */
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform 0.4s ease;
 }
 
 .product:hover img {
-  transform: scale(1.05);
+  transform: scale(1.02); /* very subtle */
+}
 }
   transition: transform .5s;
 }
