@@ -61,3 +61,31 @@ function filterProducts(category) {
 }
 
 renderProducts(productsData);
+const productsContainer = document.getElementById("products");
+
+function loadProducts(category = "all") {
+  productsContainer.innerHTML = "";
+
+  const filtered = category === "all"
+    ? products
+    : products.filter(p => p.category === category);
+
+  filtered.forEach(product => {
+    const card = document.createElement("div");
+    card.className = "product fade-in";
+
+    card.innerHTML = `
+      <div class="img-box">
+        <img src="${product.image}" alt="${product.name}">
+        <span class="price">${product.price}</span>
+      </div>
+      <h3>${product.name}</h3>
+    `;
+
+    card.addEventListener("click", () => openModal(product));
+    productsContainer.appendChild(card);
+  });
+}
+
+// INITIAL LOAD
+loadProducts();
