@@ -41,11 +41,13 @@ function renderProducts(list) {
   list.forEach(p => {
     productsContainer.innerHTML += `
       <div class="product">
-        <img src="${p.image}" alt="${p.name}">
-        <span class="tag">${p.tag}</span>
-        <h3>${p.name}</h3>
-        <p>${p.price}</p>
-      </div>
+  <div class="img-box">
+    <img src="${p.image}" alt="${p.name}">
+    <span class="price">${p.price}</span>
+    <span class="tag">${p.tag}</span>
+  </div>
+  <h3>${p.name}</h3>
+</div>
     `;
   });
 }
