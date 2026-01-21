@@ -1,99 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>New Luxury Fashion</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- HEADER -->
-  <header>
-    <div class="logo">New Luxury Fashion</div>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="logo">NEW LUXURY</div>
     <nav>
-      <ul>
-        <li><a href="#categories">Categories</a></li>
-        <li><a href="#featured">Featured</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <a href="#">Home</a>
+      <a href="#products">Shop</a>
+      <a href="#">Collections</a>
+      <a href="#">Contact</a>
     </nav>
   </header>
 
-  <!-- HERO SLIDER -->
+  <!-- HERO -->
   <section class="hero">
+    <div class="hero-slide active" style="background-image:url('hero1.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('hero2.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('hero3.jpg')"></div>
+
     <div class="hero-content">
-      <h1>Elevate Your Style</h1>
-      <p>Exclusive Luxury Fashion Collections</p>
-      <a href="#featured" class="btn">Shop Now</a>
+      <h1 class="fade">Luxury That Defines You</h1>
+      <p class="fade delay">Exclusive fashion. Limited stock.</p>
+      <button class="fade delay2">Shop Collection</button>
     </div>
   </section>
 
-  <!-- PRODUCT CATEGORIES -->
-  <section id="categories" class="categories">
-    <h2>Shop by Category</h2>
-    <div class="category-grid">
-      <div class="category-card fade-in">
-        <img src="men.jpg" alt="Men">
-        <h3>Men</h3>
-      </div>
-      <div class="category-card fade-in">
-        <img src="women.jpg" alt="Women">
-        <h3>Women</h3>
-      </div>
-      <div class="category-card fade-in">
-        <img src="accessories.jpg" alt="Accessories">
-        <h3>Accessories</h3>
-      </div>
-      <div class="category-card fade-in">
-        <img src="limited.jpg" alt="Limited Edition">
-        <h3>Limited Edition</h3>
-      </div>
-    </div>
+  <!-- CATEGORIES -->
+  <section class="categories">
+    <div class="cat-card"><img src="man.jpg"><span>Men</span></div>
+    <div class="cat-card"><img src="women.jpg"><span>Women</span></div>
+    <div class="cat-card"><img src="accessories.jpg"><span>Accessories</span></div>
+    <div class="cat-card"><img src="Accessories1.jpg"><span>Limited</span></div>
   </section>
 
-  <!-- SEARCH & FILTER -->
-  <section class="search-filter fade-in">
-    <input type="text" id="search" placeholder="Search products...">
-    <select id="filter">
-      <option value="all">All Categories</option>
-      <option value="men">Men</option>
-      <option value="women">Women</option>
-      <option value="accessories">Accessories</option>
-      <option value="limited">Limited Edition</option>
-    </select>
+  <!-- FILTER -->
+  <section class="filter">
+    <button onclick="filterProducts('all')">All</button>
+    <button onclick="filterProducts('women')">Women</button>
+    <button onclick="filterProducts('accessories')">Accessories</button>
+    <button onclick="filterProducts('limited')">Limited</button>
   </section>
 
-  <!-- FEATURED PRODUCTS -->
-  <section id="featured" class="featured">
-  <h2>Featured Products</h2>
-  <div class="products-grid" id="products-grid">
-    <!-- PRODUCTS WILL LOAD HERE DYNAMICALLY -->
-  </div>
-  </section>
-  <!-- QUICK VIEW MODAL -->
-  <div id="quick-view-modal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <img id="modal-img" src="" alt="Product">
-      <h3 id="modal-title"></h3>
-      <p id="modal-price"></p>
-      <p>Experience luxury like never before. Limited edition and exclusive designs.</p>
-      <button class="btn">Add to Wishlist</button>
-    </div>
-  </div>
+  <!-- PRODUCTS -->
+  <section id="products" class="products"></section>
 
-  <!-- FOOTER -->
-  <footer id="contact">
-    <p>&copy; 2026 New Luxury Fashion. All rights reserved.</p>
-    <div class="social">
-      <a href="#">Instagram</a>
-      <a href="#">Facebook</a>
-      <a href="#">Pinterest</a>
-    </div>
+  <footer class="footer">
+    © 2026 New Luxury Fashion — Designed for Excellence
   </footer>
 
-  <!-- SCRIPT -->
   <script src="script.js"></script>
 </body>
 </html>
