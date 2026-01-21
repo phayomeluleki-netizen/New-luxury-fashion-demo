@@ -129,9 +129,6 @@ body {
 .product:hover img {
   transform: scale(1.02); /* very subtle */
 }
-}
-  transition: transform .5s;
-}
 
 .cat-card:hover img {
   transform: scale(1.1);
