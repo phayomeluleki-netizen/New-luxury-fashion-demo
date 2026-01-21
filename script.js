@@ -1,36 +1,16 @@
-// HERO SLIDER
-// HERO SLIDER (LOCAL IMAGES)
-document.addEventListener("DOMContentLoaded",document.querySelector(".hero-content").classList.add("visible"); () => {
-  const hero = document.querySelector(".hero");
 
-  const heroImages = [
-    "hero1.jpg",
-    "hero2.jpg",
-    "hero3.jpg"
-  ];
+/* HERO SLIDER */
+const slides = document.querySelectorAll(".hero-slide");
+let currentSlide = 0;
 
-  let currentIndex = 0;
+setInterval(() => {
+  slides[currentSlide].classList.remove("active");
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].classList.add("active");
+}, 5000);
 
-  function changeHero() {
-    hero.style.backgroundImage = `url('${heroImages[currentIndex]}')`;
-    currentIndex = (currentIndex + 1) % heroImages.length;
-  }
-
-  changeHero();
-  setInterval(changeHero, 5000);
-});
-// ================================
-// DYNAMIC PRODUCT LOADING
-// ================================
-
-const products = [
-  {
-    name: "Luxury Shirt",
-    price: "$299",
-    category: "men",
-    tag: "Limited Edition",
-    image: "luxury-shirt.jpg"
-  },
+/* PRODUCTS */
+const productsData = [
   {
     name: "Evening Dress",
     price: "$499",
@@ -54,94 +34,28 @@ const products = [
   }
 ];
 
-const productsGrid = document.getElementById("products-grid");
+const productsContainer = document.querySelector(".products");
 
-function loadProducts() {
-  productsGrid.innerHTML = "";
-
-  products.forEach(product => {
-    const card = document.createElement("div");
-    card.className = "product-card fade-in";
-    card.dataset.category = product.category;
-    card.dataset.name = product.name;
-
-    card.innerHTML = `
-      <img src="${product.image}" alt="${product.name}">
-      <div class="product-overlay"><p>${product.tag}</p></div>
-      <h3>${product.name}</h3>
-      <p>${product.price}</p>
-      <button class="btn quick-view-btn">Quick View</button>
+function renderProducts(list) {
+  productsContainer.innerHTML = "";
+  list.forEach(p => {
+    productsContainer.innerHTML += `
+      <div class="product">
+        <img src="${p.image}" alt="${p.name}">
+        <span class="tag">${p.tag}</span>
+        <h3>${p.name}</h3>
+        <p>${p.price}</p>
+      </div>
     `;
-
-    productsGrid.appendChild(card);
-  });
-
-  attachQuickView();
-}
-
-// LOAD PRODUCTS ON PAGE LOAD
-window.addEventListener("DOMContentLoaded", loadProducts);
-
-// HERO TEXT ANIMATION
-const heroText = document.querySelector('.hero-text');
-window.addEventListener('load', () => {
-  heroText.classList.add('visible');
-});
-
-// SCROLL ANIMATIONS
-const faders = document.querySelectorAll('.fade-in');
-const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
-const appearOnScroll = new IntersectionObserver((entries, observer)=>{
-  entries.forEach(entry => {
-    if(!entry.isIntersecting) return;
-    entry.target.classList.add('visible');
-    observer.unobserve(entry.target);
-  });
-}, appearOptions);
-
-faders.forEach(fader => appearOnScroll.observe(fader));
-
-// PRODUCT FILTER
-const filterProducts = () => {
-  const searchValue = searchInput.value.toLowerCase();
-  const filterValue = filterSelect.value;
-
-  getProductCards().forEach(card => {
-    const name = card.dataset.name.toLowerCase();
-    const category = card.dataset.category;
-
-    card.style.display =
-      (name.includes(searchValue) || searchValue === "") &&
-      (filterValue === "all" || category === filterValue)
-        ? "block"
-        : "none";
-  });
-};
-
-
-searchInput.addEventListener('input', filterProducts);
-filterSelect.addEventListener('change', filterProducts);
-
-// QUICK VIEW MODAL
-function attachQuickView() {
-  document.querySelectorAll(".quick-view-btn").forEach(btn => {
-    btn.addEventListener("click", (e) => {
-      const card = e.target.closest(".product-card");
-      modal.style.display = "block";
-      modalImg.src = card.querySelector("img").src;
-      modalTitle.textContent = card.dataset.name;
-      modalPrice.textContent = card.querySelector("p").textContent;
-    });
   });
 }
 
-// MOBILE HAMBURGER
-const hamburger = document.createElement('div');
-hamburger.classList.add('hamburger');
-hamburger.innerHTML = '&#9776;';
-document.querySelector('header').appendChild(hamburger);
+function filterProducts(category) {
+  if (category === "all") {
+    renderProducts(productsData);
+  } else {
+    renderProducts(productsData.filter(p => p.category === category));
+  }
+}
 
-const nav = document.querySelector('header nav ul');
-hamburger.addEventListener('click', () => {
-  nav.classList.toggle('show');
-});
+renderProducts(productsData);
