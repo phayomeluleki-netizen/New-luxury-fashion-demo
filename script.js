@@ -89,3 +89,9 @@ function loadProducts(category = "all") {
 
 // INITIAL LOAD
 loadProducts();
+function openModal(product) {
+  document.getElementById("modal-img").src = product.image;
+  document.getElementById("modal-title").textContent = product.name;
+  document.getElementById("modal-price").textContent = product.price;
+  document.getElementById("quick-view-modal").style.display = "block";
+}
