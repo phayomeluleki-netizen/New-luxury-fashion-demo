@@ -223,3 +223,8 @@ body {
   padding: 5px 10px;
   font-size: 11px;
 }
+.product h3 {
+  margin-top: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  }
