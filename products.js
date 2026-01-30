@@ -37,13 +37,13 @@ const products = [
     name: "Designer Bag",
     price: "E2,499",
     category: "accessories",
-    image: "images/accessories/women1.jpg"
+    image: "images/designer-bag.jpg
   },
   {
     id: 6,
     name: "Luxury Watch",
     price: "E3,999",
     category: "accessories",
-    image: "images/accessories/watch1.jpg"
+    image: "images/accessories/watch1.jpg
   }
 ];
