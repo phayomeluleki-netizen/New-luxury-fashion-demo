@@ -130,6 +130,21 @@ body {
   padding: 15px;
   cursor: pointer;
   transition: transform 0.4s;
+  .whatsapp-btn {
+  margin-top: 12px;
+  width: 100%;
+  padding: 10px;
+  background: #25D366;
+  border: none;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  opacity: 0.85;
+}
 }
 
 .product:hover {
