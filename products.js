@@ -7,7 +7,7 @@ const products = [
     name: "Luxury Shirt",
     price: "E799",
     category: "men",
-    image: "images/men/man.jpg"
+    image: "images/men/shirt1.jpg"
   },
 
   // WOMEN
