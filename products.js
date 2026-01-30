@@ -1,5 +1,4 @@
-const WHATSAPP_NUMBER = "26876262057"; 
-// CHANGE this to your real WhatsApp number (no +, no spaces)
+const WHATSAPP_NUMBER = "26876262057";
 
 const products = [
   // MEN
@@ -8,45 +7,38 @@ const products = [
     name: "Luxury Shirt",
     price: "E799",
     category: "men",
-    image: "images/men/shirt1.jpg"
-  },
-  {
-    id: 2,
-    name: "Premium Jacket",
-    price: "E1,499",
-    category: "men",
-    image: "images/men/jacket1.jpg"
+    image: "images/men/man.jpg"
   },
 
   // WOMEN
   {
-    id: 3,
+    id: 2,
     name: "Evening Dress",
     price: "E1,899",
     category: "women",
-    image: "images/women/dress1.jpg"
+    image: "images/women/women1.jpg"
   },
   {
-    id: 4,
+    id: 3,
     name: "Luxury Heels",
     price: "E1,299",
     category: "women",
-    image: "images/women/heels1.jpg"
+    image: "images/women/women2.jpg"
   },
 
   // ACCESSORIES
   {
-    id: 5,
+    id: 4,
     name: "Designer Bag",
     price: "E2,499",
     category: "accessories",
-    image: "images/accessories/bag1.jpg"
+    image: "images/accessories/accessories2.jpg"
   },
   {
-    id: 6,
+    id: 5,
     name: "Luxury Watch",
     price: "E3,999",
     category: "accessories",
-    image: "images/accessories/watch1.jpg"
+    image: "images/accessories/accessories3.jpg"
   }
 ];
