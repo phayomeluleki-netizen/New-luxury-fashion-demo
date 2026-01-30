@@ -37,7 +37,7 @@ const products = [
     name: "Designer Bag",
     price: "E2,499",
     category: "accessories",
-    image: "images/accessories/bag1.jpg"
+    image: "images/accessories/women1.jpg"
   },
   {
     id: 6,
