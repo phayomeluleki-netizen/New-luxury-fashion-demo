@@ -254,3 +254,62 @@ body {
   color: #555;
   line-height: 1.6;
     }
+/* POLICY PAGE */
+
+.policy-hero {
+  height: 60vh;
+  background: url("images/hero/hero1.jpg") center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.policy-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+.policy-hero-text {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.policy-hero-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+}
+
+.policy-section {
+  padding: 80px 10%;
+}
+
+.policy-section.light {
+  background: #fafafa;
+}
+
+.policy-section h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: 'Playfair Display', serif;
+}
+
+.policy-card {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+.policy-card h3 {
+  margin-bottom: 10px;
+}
+
+.policy-card p {
+  color: #555;
+  line-height: 1.7;
+}
