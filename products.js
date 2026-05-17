@@ -6,7 +6,7 @@ const products = [
     name: "man formal shoes",
     price: "E799",
     category: "men",
-    image: "men/20260421_204930.png"
+    image: "20260421_204930.png"
   },
   {
     id: 2,
