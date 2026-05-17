@@ -27,7 +27,7 @@ const products = [
     name: "Lydies Dress",
     price: "E1,299",
     category: "women",
-    image: "IMG-20260109-WA0882.jpg"
+    image: "IMG-20260108-WA1053.jpg"
   },
   {
     id: 5,
