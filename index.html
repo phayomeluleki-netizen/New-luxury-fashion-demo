@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>New Luxury Fashion</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="logo">NEW LUXURY</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#products">Shop</a>
+      <a href="#">Collections</a>
+      <a href="#">Contact</a>
+      <a href="policy.html">Store Policy</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-slide active" style="background-image:url('images/hero/hero1.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('images/hero/hero2.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('images/hero/hero3.jpg')"></div>
+
+    <div class="hero-content">
+      <h1 class="fade">Luxury That Defines You</h1>
+      <p class="fade delay">Exclusive fashion. Limited stock.</p>
+      <button class="fade delay2">Shop Collection</button>
+    </div>
+  </section>
+
+  <!-- CATEGORY FILTER -->
+  <div class="category-filter">
+    <button onclick="loadProducts('all')">All</button>
+    <button onclick="loadProducts('men')">Men</button>
+    <button onclick="loadProducts('women')">Women</button>
+    
+    <button onclick="loadProducts('accessories')">Accessories</button>
+  </div>
+
+  <!-- PRODUCTS -->
+  <section id="products" class="products-grid"></section>
+
+  <!-- QUICK VIEW MODAL -->
+  <div id="quick-view-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="modal-img" src="" alt="Product">
+      <h3 id="modal-title"></h3>
+      <p id="modal-price"></p>
+      <button class="btn">Add to Wishlist</button>
+    </div>
+  </div>
+  <div class="section-divider">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+    <path d="M0,0 C480,120 960,0 1440,80 L1440,0 L0,0 Z" fill="#0F172A"></path>
+  </svg>
+</div>
+  <section class="store-info fade-in" id="store-info">
+  <h2>How Our Store Works</h2>
+
+  <div class="info-grid">
+    <div class="info-box">
+      <h3>📦 Order & Delivery</h3>
+      <p>
+        Orders are processed within <strong>24 hours</strong> after payment confirmation.
+        Delivery takes <strong>2–5 working days</strong> depending on your location in Eswatini.
+      </p>
+    </div>
+
+    <section class="payments fade-in">
+  <h2>Secure Payment Methods</h2>
+
+  <div class="payment-icons">
+    <div class="payment">
+      <img src="images/logos/mobile-money-logo.png" alt="MTN Mobile Money">
+      <p>MTN MoMo</p>
+    </div>
+
+    <div class="payment">
+      <img src="images/logos/ewallet-logo.png" alt="ewallet">
+      <p>ewallet</p>
+    </div>
+
+    <div class="payment">
+      <img src="images/logos/bank transfer.png" alt="Bank Transfer">
+      <p>Bank Transfer</p>
+    </div>
+    
+    <div class="payment">
+      <img src="images/logos/unayo-logo.png" alt="unayo">
+      <p>unayo vouchers</p>
+    </div>
+</section>
+    </div><section class="shipping-calculator fade-in">
+  <h2>Estimate Delivery</h2>
+
+  <div class="shipping-box">
+    <label>Select Your Location</label>
+    
+    <select id="location">
+      <option value="">-- Choose Location --</option>
+      <option value="mbabane">Mbabane</option>
+      <option value="manzini">Manzini</option>
+      <option value="hlatikhulu">Hlatikhulu</option>
+      <option value="siteki">Siteki</option>
+      <option value="other">Other Areas</option>
+    </select>
+
+    <button onclick="calculateShipping()">Check Delivery</button>
+
+    <div id="shipping-result"></div>
+  </div>
+</section>
+
+    <div class="info-box">
+      <h3>📞 Customer Support</h3>
+      <p>
+        Need help?
+        <br>📱 WhatsApp: <strong>+268 76 262 057</strong>
+        <br>🕘 Support Hours: Mon–Sat, 8am – 6pm
+      </p>
+    </div>
+  </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <footer id="contact">
+  <p>
+    © 2026 New Luxury Fashion.<br>
+    Delivery: 2–5 Working Days | Secure Payments | WhatsApp Orders Available
+  </p>
+
+  <div class="social">
+    <a href="#">Facebook</a>
+    <a href="#">WhatsApp</a>
+  </div>
+    </footer>
+
+  <!-- SCRIPTS -->
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
