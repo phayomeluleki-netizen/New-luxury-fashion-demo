@@ -20,7 +20,7 @@ const products = [
     name: "Evening Dress",
     price: "E1,899",
     category: "women",
-    image: "IMG-20260107-WA1027.jpg"
+    image: "evening-dress.jpg"
   },
   {
     id: 4,
